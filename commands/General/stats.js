@@ -1,16 +1,8 @@
 const Command = require('../../structures/Command');
-const {
-    pingIcon,
-    pingIconColor
-} = require('../../res/icons.json');
-const {
-    MessageEmbed
-} = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const os = require('os');
 const hb = require('hastebin-gen');
-const {
-    table
-} = require('table');
+const { table } = require('table');
 
 class Stats extends Command {
     constructor(client) {
@@ -82,7 +74,6 @@ class Stats extends Command {
 
         const embed = new MessageEmbed()
             .setColor(0x7289DA)
-            .setTitle(message.guild.me.nickname || this.client.user.username)
             .addField('General Information', general)
             .addField('Server Information', server)
 

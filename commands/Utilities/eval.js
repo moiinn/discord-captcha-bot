@@ -7,7 +7,7 @@ class Eval extends Command {
     constructor(client) {
         super({
             name: 'eval',
-            description: 'Lets the bot owner evaluate commands.'
+            description: 'Developer // Evaluate code'
         });
 
         this.client = client;

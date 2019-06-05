@@ -1,11 +1,5 @@
 const Command = require('../../structures/Command');
-const {
-    pingIcon,
-    pingIconColor
-} = require('../../res/icons.json');
-const {
-    MessageEmbed
-} = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 class NewCaptcha extends Command {
     constructor(client) {

@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const Hook = require('quick.hook');
 const db = require('quick.db');
 const ms = require('parse-ms');
+new (require('./Logger'))({ appname: 'Kensho' });
 
 require('./Guild');
 require('./GuildChannel');
@@ -26,7 +27,6 @@ class Base extends Discord.Client {
         
         // Branding
         this.prefix = settings.prefix || '>';
-        this.customBranding = settings.name;
         this.playing = settings.playing;
         
     }

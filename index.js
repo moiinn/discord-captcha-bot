@@ -3,12 +3,12 @@ const Client = require('./structures/Client');
 // Discord Client
 const client = new Client({
     disabledEvents: ['TYPING_START'],
-    status: 'online',
-    prefix: '.!'
+    status: 'idle',
+    prefix: '!'
 });
 
 client.run();
-client.login("YOUR TOKEN");
+client.login("NTY1MDE5NDE2ODAzMTQ3Nzc2.XPcLIQ.0SAaogK6XHM4QEOv4CcJ4U-sykM");
 
 /*
 const http = require('http');

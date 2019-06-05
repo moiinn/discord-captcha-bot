@@ -1,11 +1,5 @@
 const Command = require('../../structures/Command');
-const {
-    pingIcon,
-    pingIconColor
-} = require('../../res/icons.json');
-const {
-    MessageEmbed
-} = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 class Ping extends Command {
     constructor(client) {
@@ -21,7 +15,7 @@ class Ping extends Command {
 
         const embed = new MessageEmbed()
             .setColor(0xffffff)
-            .setFooter(`🏓 Pong! I'm currently running: ${Math.floor(this.client.ws.ping)}ms`);
+            .setFooter(`🏓 Pong! I'm currently running @ ${Math.floor(this.client.ws.ping)}ms`);
 
         return message.channel.send(embed);
 

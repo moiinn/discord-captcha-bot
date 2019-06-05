@@ -17,7 +17,7 @@ class CommandHandler {
         this.client.aliases.set(r, command);
       });
       this.client.commands.set(command.name, command);
-      console.log('Loaded Command: ' + command.name);
+      console.log(`» Successfuly loaded command: ${command.name}`);
       if (!this.client.help[resolve(root).split('\\').pop()]) this.client.help[resolve(root).split('\\').pop()] = [`${command.name} - *${command.description}*`];
       else this.client.help[resolve(root).split('\\').pop()].push(`${command.name} - *${command.description}*`);
       next();

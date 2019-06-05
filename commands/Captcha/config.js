@@ -1,9 +1,6 @@
 const Command = require('../../structures/Command');
-const icons = require('../../res/icons.json');
 const count = require('count-array-values')
-const {
-    MessageEmbed
-} = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 class Config extends Command {
     constructor(client) {

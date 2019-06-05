@@ -1,11 +1,5 @@
 const Command = require('../../structures/Command');
-const {
-    pingIcon,
-    pingIconColor
-} = require('../../res/icons.json');
-const {
-    MessageEmbed
-} = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 class Verify extends Command {
     constructor(client) {
@@ -21,16 +15,17 @@ class Verify extends Command {
     exec(message) {
 
         // Validate Config
-        let isConfigValid = message.guild.validateConfig(message.channel);
+        const isConfigValid = message.guild.validateConfig(message.channel);
         if (!isConfigValid) return;
 
         // Fetch Config
-        let config = message.guild.config;
+        console.log(message.guild.config)
+        const config = message.guild.config;
 
         // Create Embed
         const embed = new MessageEmbed()
-            .setColor(0x7289DA)
-            .setTitle('Highbrand Verification System')
+         .setColor(0x7289DA)
+         .setTitle('Highbrand Verification System')
 
         // Check Pending Captcha
         if ((this.client.db.get(`captchaServers_${message.author.id}`) || []).includes(message.guild.id)) return message.channel.send(embed.setFooter('Sorry, you already have a pending Captcha.'));

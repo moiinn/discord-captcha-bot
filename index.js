@@ -8,7 +8,7 @@ const client = new Client({
 });
 
 client.run();
-client.login("NTY1MDE5NDE2ODAzMTQ3Nzc2.XPcLIQ.0SAaogK6XHM4QEOv4CcJ4U-sykM");
+client.login("YOUR TOKEN");
 
 /*
 const http = require('http');
